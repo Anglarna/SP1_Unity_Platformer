@@ -24472,6 +24472,8 @@ MonoBehaviour:
   target: {fileID: 3223053}
   offset: {x: 0, y: 1, z: -14}
   smoothing: 3
+  offsetLeft: {x: -3, y: 1, z: -14}
+  offsetRight: {x: 3, y: 1, z: -14}
 --- !u!1 &525766432
 GameObject:
   m_ObjectHideFlags: 0
