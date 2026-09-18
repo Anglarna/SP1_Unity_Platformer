@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 46d43599ea549154b9fff6b1bfe0236f
+guid: 31024e77c11f21b4db78b1e064eae34e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5931341196772825636
-    second: Waves 1_0
+      213: -8105983766896256647
+    second: Moln 3_0
+  - first:
+      213: -6370237743886779769
+    second: Moln 3_1
+  - first:
+      213: -4925939917575806314
+    second: Moln 3_2
+  - first:
+      213: -1295642292992563923
+    second: Moln 3_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -102,7 +111,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Waves 1_0
+      name: Moln 3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,8 +126,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42ad843946b505250800000000000000
-      internalID: 5931341196772825636
+      spriteID: 979d01b16b2c18f80800000000000000
+      internalID: -8105983766896256647
       vertices: []
       indices: 
       edges: []
@@ -127,7 +136,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 29442de4c84c0dd4bb2a276610ee97d4
+    spriteID: 1458e513f21fa4f4ab3d62bf55b0786a
     internalID: 0
     vertices: []
     indices: 
@@ -137,7 +146,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Waves 1_0: 5931341196772825636
+      Moln 3_0: -8105983766896256647
+      Moln 3_1: -6370237743886779769
+      Moln 3_2: -4925939917575806314
+      Moln 3_3: -1295642292992563923
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
