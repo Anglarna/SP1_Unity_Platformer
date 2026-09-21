@@ -16,7 +16,7 @@ public class Paralax : MonoBehaviour
         float temp = cam.transform.position.x * (1 - parallaxEffect);
         float distance = cam.transform.position.x * parallaxEffect;
 
-        transform.position = new(startPos.x + distance, startPos.y);
+        transform.position = new(startPos.x + distance, cam.transform.position.y);
 
         if (temp > startPos.x + (length * 1.0f)) startPos.x += length;
         else if (temp < startPos.x - (length * 1.0f)) startPos.x -= length;
