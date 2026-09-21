@@ -28790,6 +28790,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2188297435219944160, guid: 0ee5aa3b34989b14ea52538c0b8ed4ae, type: 3}
+      propertyPath: EnemySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1fdbe7a4502541a4c9f116a2fa8b1133, type: 3}
+    - target: {fileID: 2188297435219944160, guid: 0ee5aa3b34989b14ea52538c0b8ed4ae, type: 3}
       propertyPath: knockbackForce
       value: 700
       objectReference: {fileID: 0}
@@ -39225,6 +39229,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2188297435219944160, guid: 0ee5aa3b34989b14ea52538c0b8ed4ae, type: 3}
+      propertyPath: EnemySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1fdbe7a4502541a4c9f116a2fa8b1133, type: 3}
     - target: {fileID: 2188297435219944160, guid: 0ee5aa3b34989b14ea52538c0b8ed4ae, type: 3}
       propertyPath: upwardsForce
       value: 300
