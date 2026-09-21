@@ -3,6 +3,9 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 2.8f;
+    [SerializeField] private AudioClip EnemySound;
+    [Range(0f, 1f)]
+    [SerializeField] private float soundVolume = 1.0f;
     [SerializeField] private float bounciness = 100f;
     private SpriteRenderer rend;
     [SerializeField] private int DamageGiven = 1;
@@ -64,6 +67,12 @@ public class EnemyMovement : MonoBehaviour
             {
                 rigidbody2D.linearVelocity = new Vector2(rigidbody2D.linearVelocity.x, 0);
                 rigidbody2D.AddForce(new Vector2(0, bounciness));
+
+                if (EnemySound != null)
+                {
+                    Vector3 soundPosition = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
+                    AudioSource.PlayClipAtPoint(EnemySound, soundPosition, soundVolume);
+                }
             }
 
             Destroy(gameObject);
