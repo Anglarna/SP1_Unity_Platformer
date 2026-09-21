@@ -28853,6 +28853,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2188297435219944160, guid: 0ee5aa3b34989b14ea52538c0b8ed4ae, type: 3}
+      propertyPath: EnemySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1fdbe7a4502541a4c9f116a2fa8b1133, type: 3}
+    - target: {fileID: 2188297435219944160, guid: 0ee5aa3b34989b14ea52538c0b8ed4ae, type: 3}
       propertyPath: knockbackForce
       value: 700
       objectReference: {fileID: 0}
@@ -39289,6 +39293,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2188297435219944160, guid: 0ee5aa3b34989b14ea52538c0b8ed4ae, type: 3}
+      propertyPath: EnemySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1fdbe7a4502541a4c9f116a2fa8b1133, type: 3}
+    - target: {fileID: 2188297435219944160, guid: 0ee5aa3b34989b14ea52538c0b8ed4ae, type: 3}
       propertyPath: upwardsForce
       value: 300
       objectReference: {fileID: 0}
@@ -41769,11 +41777,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1335854842485335926, guid: 0ee5aa3b34989b14ea52538c0b8ed4ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.77
+      value: 19.027
       objectReference: {fileID: 0}
     - target: {fileID: 1335854842485335926, guid: 0ee5aa3b34989b14ea52538c0b8ed4ae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.86
+      value: -0.898
       objectReference: {fileID: 0}
     - target: {fileID: 1335854842485335926, guid: 0ee5aa3b34989b14ea52538c0b8ed4ae, type: 3}
       propertyPath: m_LocalPosition.z
@@ -41807,6 +41815,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2188297435219944160, guid: 0ee5aa3b34989b14ea52538c0b8ed4ae, type: 3}
+      propertyPath: EnemySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1fdbe7a4502541a4c9f116a2fa8b1133, type: 3}
     - target: {fileID: 4334896889318301606, guid: 0ee5aa3b34989b14ea52538c0b8ed4ae, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
