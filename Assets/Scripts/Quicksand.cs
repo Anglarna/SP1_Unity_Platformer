@@ -3,13 +3,33 @@ using UnityEngine;
 public class Quicksand : MonoBehaviour
 {
     [SerializeField] private PlayerMovement player;
-    //TODO: lägg till kort delay innan physicsMode blir till normal
+    [SerializeField] private float delayDuration = 1f;
+    private float delay = 0;
+    private bool doDelay = false;
+    private void Start()
+    {
+        delay = delayDuration;
+    }
+    private void FixedUpdate()
+    {
+        if (delay <= 0 && doDelay)
+        {
+            player.physicsMode = PlayerMovement.PhysicsMode.normal;
+            doDelay = false;
+            delay = delayDuration;
+        }
+        else if (doDelay)
+        {
+            delay -= Time.deltaTime;
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            delay = delayDuration;
             player.physicsMode = PlayerMovement.PhysicsMode.quickSand;
-            print(player.physicsMode);
+            doDelay = false;
         }
     }
 
@@ -17,8 +37,8 @@ public class Quicksand : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            player.physicsMode = PlayerMovement.PhysicsMode.normal;
-            print(player.physicsMode);
+            delay = delayDuration;
+            doDelay = true;
         }
     }
 }

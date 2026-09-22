@@ -10,8 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveDirection;
 
     [HideInInspector] public PhysicsMode physicsMode;
-    [SerializeField] private float defaultGravity = 4, defaultJumpForce = 750;
-    [SerializeField] private float quickSandGravity = 0.001f, quickSandJumpForce = 100;
+    [SerializeField] private float quickSandSlowdown = 0.001f;
 
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float jumpForce = 200f;
@@ -66,11 +65,7 @@ public class PlayerMovement : MonoBehaviour
             FlipSprite(false);
         }
 
-        if (physicsMode == PhysicsMode.normal)
-        {
-            PhysicsNormal();
-        }
-        else if (physicsMode == PhysicsMode.quickSand)
+        if (physicsMode == PhysicsMode.quickSand)
         {
             PhysicsQuicksand();
         }
@@ -105,19 +100,9 @@ public class PlayerMovement : MonoBehaviour
             audioSorce.PlayOneShot(jumpSounds[randomJumpSound]);
         }
     }
-
-    private void PhysicsNormal()
-    {
-        rigidBody2D.gravityScale = defaultGravity;
-        jumpForce = defaultJumpForce;
-        print("Normal");
-    }
-
     private void PhysicsQuicksand()
     {
-        rigidBody2D.gravityScale = quickSandGravity;
-        jumpForce = quickSandJumpForce;
-        print("Quicksand");
+        rigidBody2D.linearVelocityY *= quickSandSlowdown;
     }
     private bool CheckIsGrounded()
     {
