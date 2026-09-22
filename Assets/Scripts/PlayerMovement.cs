@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private InputActionReference jump;
     private float moveDirection;
 
+    [HideInInspector] public PhysicsMode physicsMode;
+    [SerializeField] private float defaultGravity = 4, defaultJumpForce = 750;
+    [SerializeField] private float quickSandGravity = 0.001f, quickSandJumpForce = 100;
 
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float jumpForce = 200f;
@@ -18,12 +21,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioClip[] jumpSounds;
     [SerializeField] private ParticleSystem jumpParticleSystem;
 
-   bool canMove = true;
+    bool canMove = true;
 
     private AudioSource audioSorce;
     private Rigidbody2D rigidBody2D;
     private SpriteRenderer rend;
     private Animator anim;
+
+    public enum PhysicsMode
+    {
+        normal = 0,
+        quickSand = 1,
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
         audioSorce = GetComponent<AudioSource>();
 
         jump.action.started += Jump;
+
+        physicsMode = PhysicsMode.normal;
     }
 
     // Update is called once per frame
@@ -53,6 +64,15 @@ public class PlayerMovement : MonoBehaviour
         if (moveDirection > 0f)
         {
             FlipSprite(false);
+        }
+
+        if (physicsMode == PhysicsMode.normal)
+        {
+            PhysicsNormal();
+        }
+        else if (physicsMode == PhysicsMode.quickSand)
+        {
+            PhysicsQuicksand();
         }
     }
 
@@ -76,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump(InputAction.CallbackContext context)
     {
-        if (CheckIsGrounded() == true)
+        if (CheckIsGrounded() || physicsMode == PhysicsMode.quickSand)
         {
             rigidBody2D.AddForce(new Vector2(0, jumpForce));
             jumpParticleSystem.Play();
@@ -86,6 +106,19 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void PhysicsNormal()
+    {
+        rigidBody2D.gravityScale = defaultGravity;
+        jumpForce = defaultJumpForce;
+        print("Normal");
+    }
+
+    private void PhysicsQuicksand()
+    {
+        rigidBody2D.gravityScale = quickSandGravity;
+        jumpForce = quickSandJumpForce;
+        print("Quicksand");
+    }
     private bool CheckIsGrounded()
     {
         RaycastHit2D leftHit = Physics2D.Raycast(leftFoot.position, Vector2.down, rayCastDistance, whatIsGround);
