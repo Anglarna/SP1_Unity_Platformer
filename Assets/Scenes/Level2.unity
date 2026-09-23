@@ -24935,7 +24935,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0020530224, y: 0.6193721}
+  m_Offset: {x: -0.0020530224, y: 4.8166695}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -24945,7 +24945,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.9269423, y: 2.0199933}
+  m_Size: {x: 1.9269423, y: 10.414587}
   m_EdgeRadius: 0
 --- !u!95 &144436321
 Animator:
@@ -31547,6 +31547,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2188297435219944160, guid: 0ee5aa3b34989b14ea52538c0b8ed4ae, type: 3}
+      propertyPath: EnemySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1fdbe7a4502541a4c9f116a2fa8b1133, type: 3}
     - target: {fileID: 4334896889318301606, guid: 0ee5aa3b34989b14ea52538c0b8ed4ae, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
