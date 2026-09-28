@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   moveSpeed: 2.8
   EnemySound: {fileID: 8300000, guid: 1fdbe7a4502541a4c9f116a2fa8b1133, type: 3}
-  soundVolume: 1
+  soundVolume: 0.1
   bounciness: 600
   DamageGiven: 1
   knockbackForce: 700
