@@ -381,8 +381,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   startingHealth: 5
   spawnPosition: {fileID: 132790975}
-  healthSlider: {fileID: 1278121250}
-  fillImage: {fileID: 1810525206}
   normalHealthColor: {r: 0.35686275, g: 0.6862745, b: 0.26666668, a: 1}
   criticalHealthColor: {r: 1, g: 0.82567024, b: 0, a: 1}
 --- !u!114 &3223060
@@ -22907,12 +22905,9 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 2
     m_Data: {fileID: 4239696434956193796, guid: a98c9baae116bfd4e9dfde6007e9ea1f, type: 3}
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: 453937258, guid: a98c9baae116bfd4e9dfde6007e9ea1f, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
-    m_RefCount: 2194
+    m_RefCount: 2186
     m_Data:
       e00: 1
       e01: 0
@@ -23694,7 +23689,7 @@ MonoBehaviour:
   panel: {fileID: 1293679534}
   finishedText: {fileID: 1506429423}
   unfinishedText: {fileID: 962649951}
-  levelIndex: 2
+  levelIndex: 4
 --- !u!61 &144436320
 BoxCollider2D:
   m_ObjectHideFlags: 0
