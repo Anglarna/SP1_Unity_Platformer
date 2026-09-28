@@ -24898,7 +24898,7 @@ MonoBehaviour:
   panel: {fileID: 1293679534}
   finishedText: {fileID: 1506429423}
   unfinishedText: {fileID: 962649951}
-  levelIndex: 0
+  levelIndex: 3
 --- !u!61 &144436320
 BoxCollider2D:
   m_ObjectHideFlags: 0
